@@ -59,11 +59,11 @@
       self.webView.opaque = NO;
       self.webView.backgroundColor = [UIColor clearColor];
 
-      [self.webView.superview addSubview:self.cameraRenderController.view];
-      [self.webView.superview bringSubviewToFront:self.webView];
+      [self.viewController.view addSubview:self.cameraRenderController.view];
+      [self.viewController.view bringSubviewToFront:self.webView];
     } else {
       self.cameraRenderController.view.alpha = alpha;
-      [self.webView.superview insertSubview:self.cameraRenderController.view aboveSubview:self.webView];
+      [self.viewController.view insertSubview:self.cameraRenderController.view aboveSubview:self.webView];
     }
 
     // Setup session
